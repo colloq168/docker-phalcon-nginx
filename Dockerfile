@@ -42,12 +42,6 @@ RUN echo "extension=phalcon.so" >> /etc/php5/fpm/conf.d/30-phalcon.ini
 #installing supervisord
 RUN apt-get install -y supervisor
 
-#mongodb local
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
-RUN echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-RUN apt-get update -y
-RUN apt-get install -y mongodb-org-shell
-
 # Add files
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD www.conf /etc/php5/fpm/pool.d/www.conf
