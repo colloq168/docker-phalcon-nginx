@@ -8,7 +8,7 @@ just run :
 docker pull ishiidaichi/docker-phalcon-nginx
 
 # run your Phalcon PHP app!
-docker run -d -p 80:80 -v /path/to/your/app:/var/www/html ishiidaichi/docker-phalcon-nginx
+docker run -d -p 80:80 -p 443:443 -v /path/to/your/app:/var/www/html ishiidaichi/docker-phalcon-nginx
 ```
 
 That's it!
